@@ -1,8 +1,12 @@
 set :application, "Plan49"
 set :repository,  "git@github.com:parasquid/plan49.git"
-
+default_run_options[:pty] = true
+set :user, "tristan"
+ssh_options[:forward_agent] = true
 set :scm, :git
 # Or: `accurev`, `bzr`, `cvs`, `darcs`, `git`, `mercurial`, `perforce`, `subversion` or `none`
+
+set :deploy_via, :remote_cache
 
 role :web, "plan49.com"                          # Your HTTP server, Apache/etc
 role :app, "plan49.com"                          # This may be the same as your `Web` server
