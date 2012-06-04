@@ -1,4 +1,4 @@
-Date: 28 May 2012 01:49 +0800
+Date: June 4
 Categories: 2012, websites
 
 # Hello, World
@@ -6,4 +6,4 @@ Categories: 2012, websites
 You're looking at the very first project for Plan49 :) What's Plan49 you say?
 Well, you can read all about it in the [Frequently Asked Questions](/faq) page.
 
-May 28 is, incidentally, Week 22 but I want to start counting from 1 so this project is counted as the Week 1 project. Later on we'll just go through the year up until Week 31 then Week 2 of 2013 will be Week 32.
+June 4 is, incidentally, Week 23 but I want to start counting from 1 so this project is counted as the Week 1 project. Later on we'll just go through the year up until Week 31 then Week 2 of 2013 will be Week 32.

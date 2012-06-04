@@ -1,0 +1,7 @@
+Date: June 4, 2012
+
+# I'm now officially an iOS developer
+
+I've made the leap, and paid RM299 for the privilege of developing for iOS. I've deployed my very first iOS apps onto my iPod Touch (a simple Titanium Appcelerator hello-world app, as well as one of the default XCode project templates).
+
+Three cheers for continuous learning :)

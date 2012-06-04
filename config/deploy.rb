@@ -1,17 +1,35 @@
+require "bundler/capistrano"
+load "config/recipes/base"
+
 set :application, "Plan49"
 set :repository,  "git@github.com:parasquid/plan49.git"
 default_run_options[:pty] = true
 set :user, "tristan"
+set :server_name, 'plan49.com'
+
+# so there is no need to add specific server keys
 ssh_options[:forward_agent] = true
+namespace :ssh do 
+  task :start_agent do 
+    `ssh-add` 
+  end 
+end
+before 'deploy:update_code', 'ssh:start_agent' 
+
+default_run_options[:pty] = true
+
 set :scm, :git
 # Or: `accurev`, `bzr`, `cvs`, `darcs`, `git`, `mercurial`, `perforce`, `subversion` or `none`
 
 set :deploy_via, :remote_cache
+set :deploy_to, "/home/#{user}/apps/#{application}"
+set :use_sudo, false
 
-role :web, "plan49.com"                          # Your HTTP server, Apache/etc
-role :app, "plan49.com"                          # This may be the same as your `Web` server
-role :db,  "plan49.com", :primary => true # This is where Rails migrations will run
-role :db,  "plan49.com"
+role :web, "108.174.55.115"                          # Your HTTP server, Apache/etc
+role :app, "108.174.55.115"                          # This may be the same as your `Web` server
+role :db,  "108.174.55.115", :primary => true # This is where Rails migrations will run
+role :db,  "108.174.55.115"
+set :port, 20022
 
 # if you want to clean up old releases on each deploy uncomment this:
 # after "deploy:restart", "deploy:cleanup"
@@ -19,11 +37,9 @@ role :db,  "plan49.com"
 # if you're still using the script/reaper helper you will need
 # these http://github.com/rails/irs_process_scripts
 
-# If you are using Passenger mod_rails uncomment this:
 namespace :deploy do
-  task :start do ; end
-  task :stop do ; end
-  task :restart, :roles => :app, :except => { :no_release => true } do
-    run "#{try_sudo} touch #{File.join(current_path,'tmp','restart.txt')}"
+  task :restart do
+    run "#{sudo} service thin stop"
+    run "#{sudo} service thin start"
   end
 end
