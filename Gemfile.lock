@@ -1,5 +1,5 @@
 GIT
-  remote: git://github.com/gma/nesta.git
+  remote: git://github.com/parasquid/nesta.git
   revision: 858af82c8b0627f6621ad9fcbcfdb26f7118cd4a
   specs:
     nesta (0.9.13)
