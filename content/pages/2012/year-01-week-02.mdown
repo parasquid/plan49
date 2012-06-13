@@ -1,0 +1,10 @@
+Date: June 13
+Categories: 2012, websites
+
+# Presentation on making webforms more usable
+
+This is project number 2 (out of 49) and it's all about webforms. See the [presentation](/presentations/webforms.html) here.
+
+I initially planned to make the presentation in keynote with pictures substituting for the live forms, but I thought to myself: I'm speaking at a web design camp, so shouldn't I use web technology to deliver my presentation? Eventually I ended up using [jmpress.js](http://shama.github.com/jmpress.js/) to create a simple slide animated prezi.
+
+One of the advantages in using a medium that is very close to the topic you are presenting on is that you can easily showcase the tech without having to prepare much, while still being very visually appealing. I pretty much just let Chrome and the iPad simulator handle the points I wanted to make (validation bubbles, keyboard changes, etc. Viewing the presentation on the iPad still needs a bit of work though; I didn't have time to properly hook up the touch events and make the styles more responsive.
