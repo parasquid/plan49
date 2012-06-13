@@ -2,99 +2,423 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <title>jmpress.js | automatic-layout example</title>
+  <title>Webforms and usability</title>
 
-  <meta name="description" content="jmpress.js is a jQuery plugin to build a website on the infinite canvas">
-  <meta name="author" content="Kyle Robinson Young @shama & Tobias Koppers @sokra" />
+  <meta name="description" content="">
+  <meta name="author" content="" />
   <meta name="viewport" content="width=device-width, maximum-scale=1.0, initial-scale=1.0, user-scalable=yes" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
-  <link href="/css/automatic.css" rel="stylesheet" type="text/css" />
+  <link href="/stylesheets/webforms.css" rel="stylesheet" type="text/css" />
+  <link href="/stylesheets/docs.css" rel="stylesheet" type="text/css" />
+  <link href="/stylesheets/animations.css" rel="stylesheet" type="text/css" />
+  <link href="http://twitter.github.com/bootstrap/assets/css/bootstrap.css" rel="stylesheet" type="text/css" />
 
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-  <script type="text/javascript" src="/javascript/jmpress.all.min.js"></script>
-  <script type="text/javascript">
-    $.jmpress("template", "auto", {
-      children: function(idx) {
-        return {
-          y: 400
-          ,x: -300 + idx * 300
-          ,template: "auto"
-          ,scale: 0.3
-        }
-      }
-    });
-  </script>
+  <script type="text/javascript" src="/javascripts/jmpress.min.js"></script>
+  <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/freebase/suggest/3_1/suggest.min.css" />
+  <script type="text/javascript" src="https://www.gstatic.com/freebase/suggest/3_1/suggest.min.js"></script>
 </head>
 <body>
 
-<div id="jmpress" data-template="auto">
-  <section>
-    <h1>Future Perfect</h1>
-    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+<div id="simple">
+  <div class="step">
+    <header class="jumbotron masthead">
+      <div class="inner">
+        <h1>Webforms Usability</h1>
+        <p>Simple techniques to make online forms easier to navigate, use, and complete.</p>
+        <br />
+        <br />
+        <p>@parasquid</p>
+      </div>
+    </header>
+  </div>
 
-    <section>
-      <h1>Hypertext</h1>
-      <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
-    </section>
+  <div class="step" data-x="1000">
+    <h1>Webforms Usability</h1>
+    <div class="slide-content">
+      <ul>
+        <li data-jmpress="drive-right">The primary goal of every form is completion</li>
+        <li data-jmpress="drive-right">How can you make the user experience <b>as painless as possible?</b></li>
+        <li data-jmpress="drive-right">But! Still get the their information <b>correct?</b></li>
+      </ul>
+    </div>
+  </div>
 
-    <section>
-      <h1>Why a World Wide Web?</h1>
-        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+  <div class="step" data-x="2000">
+    <h1>HTML5 Input Types</h1>
+    <div class="slide-content">
+      <div class="row-fluid">
+      
+        <div class="span6">
+          <h3>Normal form</h3>
+          <form class="well">
+            <div class="control-group">
+              <label class="control-label" for="normal-email">input type="text"</label>
+              <div class="controls">
+                <input class="input-xlarge focused" id="normal-email" type="text" placeholder="name@email.com" autofocus="autofocus" />
+              </div>
+              <div class="form-actions">
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </div>
+            </div>
+          </form>
+        </div>
+        
+        <div class="span6">
+          <h3>Better form</h3>
+          <form class="well">
+            <div class="control-group">
+              <label class="control-label" for="better-email">input type="email"</label>
+              <div class="controls">
+                <input class="input-xlarge focused" id="better-email" type="email" placeholder="name@email.com" />
+              </div>
+              <div class="form-actions">
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="step" data-x="3000">
+    <h1>HTML5 Input Types</h1>
+    <div class="slide-content">
+      <div class="row-fluid">
+      
+        <div class="span6">
+          <h3>Normal form</h3>
+          <form class="well">
+            <div class="control-group">
+              <label class="control-label" for="normal-number">input type="text"</label>
+              <div class="controls">
+                <input class="input-xlarge focused" id="normal-number" type="text" placeholder="1337" autofocus="autofocus" />
+              </div>
+              <div class="form-actions">
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </div>
+            </div>
+          </form>
+        </div>
+        
+        <div class="span6">
+          <h3>Better form</h3>
+          <form class="well">
+            <div class="control-group">
+              <label class="control-label" for="better-number">input type="number"</label>
+              <div class="controls">
+                <input class="input-xlarge focused" id="better-number" type="number" placeholder="1337" />
+              </div>
+              <div class="form-actions">
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
 
-      <section>
-        <h1>Why a another World Wide Web?</h1>
-        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
-      </section>
+  <div class="step" data-x="4000">
+    <h1>HTML5 Input Types</h1>
+    <div class="slide-content">
+      <div class="row-fluid">
+      
+        <div class="span6">
+          <h3>Normal form</h3>
+          <form class="well">
+            <div class="control-group">
+              <label class="control-label" for="normal-range">input type="text"</label>
+              <div class="controls">
+                <input class="input-xlarge focused" id="normal-range" type="text" autofocus="autofocus" />
+              </div>
+              <div class="form-actions">
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </div>
+            </div>
+          </form>
+        </div>
+        
+        <div class="span6">
+          <h3>Better form</h3>
+          <form class="well">
+            <div class="control-group">
+              <label class="control-label" for="better-range">input type="range"</label>
+              <div class="controls">
+                <input class="input-xlarge focused" id="better-range" type="range" min="0" max="10" step="1"/>
+              </div>
+              <div class="form-actions">
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
 
-      <section>
-        <h1>Why why why?</h1>
-        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
-      </section>
-    </section>
+  <div class="step" data-x="5000">
+    <h1>HTML5 Input Types</h1>
+    <div class="slide-content">
+      <div class="row-fluid">
+      
+        <div class="span6">
+          <h3>Normal form</h3>
+          <form class="well">
+            <div class="control-group">
+              <label class="control-label" for="normal-url">input type="text"</label>
+              <div class="controls">
+                <input class="input-xlarge focused" id="normal-url" type="text" placeholder="http://www.mindvalley.com" autofocus="autofocus" />
+              </div>
+              <div class="form-actions">
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </div>
+            </div>
+          </form>
+        </div>
+        
+        <div class="span6">
+          <h3>Better form</h3>
+          <form class="well">
+            <div class="control-group">
+              <label class="control-label" for="better-url">input type="url"</label>
+              <div class="controls">
+                <input class="input-xlarge focused" id="better-url" type="url" placeholder="http://www.mindvalley.com" />
+              </div>
+              <div class="form-actions">
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
 
-    <section>
-      <h1>1,000,000,000,000 pages</h1>
-      <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
-    </section>
-  </section>
+  <div class="step" data-x="6000">
+    <h1>Labels and Placeholders</h1>
+    <div class="slide-content">
+      <h2>Top aligned</h2>
+        <form class="well">
+          <div class="control-group">
+            <label class="control-label" for="firstname-top">First name</label>
+            <div class="controls">
+              <input class="input-xlarge focused" id="firstname-top" type="text" placeholder="" /><br />
+            </div>
+            <label class="control-label" for="lastname-top">Last name</label>
+            <div class="controls">
+              <input class="input-xlarge focused" id="lastname-top" type="text" placeholder="" /><br />
+            </div>
+            <label class="control-label" for="email-top">Email address</label>
+            <div class="controls">
+              <input class="input-xlarge focused" id="email-top" type="email" placeholder="" /><br />
+            </div>
+            <div class="form-actions">
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+          </div>
+        </form>
+    </div>
+  </div>
 
-  <section>
-    <h1>An Introduction to Markup</h1>
-    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+  <div class="step" data-x="7000">
+    <h1>Labels and Placeholders</h1>
+    <div class="slide-content">
+      <h2>Right aligned</h2>
+        <form class="well form-horizontal">
+          <div class="control-group">
+            <label class="control-label" for="firstname-right">First name</label>
+            <div class="controls">
+              <input class="input-xlarge focused" id="firstname-right" type="text" placeholder="" /><br /><br />
+            </div>
+            <label class="control-label" for="lastname-right">Last name</label>
+            <div class="controls">
+              <input class="input-xlarge focused" id="lastname-right" type="text" placeholder="" /><br /><br />
+            </div>
+            <label class="control-label" for="email-right">Email address</label>
+            <div class="controls">
+              <input class="input-xlarge focused" id="email-right" type="email" placeholder="" /><br /><br />
+            </div>
+            <div class="form-actions">
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+          </div>
+        </form>
+    </div>
+  </div>
 
-    <section>
-      <h1>Text With Markup</h1>
-      <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
-    </section>
+  <div class="step" data-x="8000">
+    <h1>Labels and Placeholders</h1>
+    <div class="slide-content">
+      <h2>left aligned</h2>
+        <form class="well form-horizontal">
+          <div class="control-group">
+            <label class="control-label" for="firstname-left" style="text-align: left; margin-left: 40px; width: 80px;">First name</label>
+            <div class="controls">
+              <input class="input-xlarge focused" id="firstname-left" type="text" placeholder="" /><br /><br />
+            </div>
+            <label class="control-label" for="lastname-left" style="text-align: left; margin-left: 40px; width: 80px;">Last name</label>
+            <div class="controls">
+              <input class="input-xlarge focused" id="lastname-left" type="text" placeholder="" /><br /><br />
+            </div>
+            <label class="control-label" for="email-left" style="text-align: left; margin-left: 40px; width: 80px;">Email address</label>
+            <div class="controls">
+              <input class="input-xlarge focused" id="email-left" type="email" placeholder="" /><br /><br />
+            </div>
+            <div class="form-actions">
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+          </div>
+        </form>
+    </div>
+  </div>
 
-    <section>
-      <h1>Text Without Markup</h1>
-      <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+  <div class="step" data-x="9000">
+    <h1>Labels and Placeholders</h1>
+    <div class="slide-content">
+      <h2>Placeholders</h2>
+        <form class="well form-inline">
+          <div class="control-group">
+            <div class="controls">
+              <input class="input-xlarge focused" type="text" placeholder="First name" />
+              <input class="input-xlarge focused" type="text" placeholder="Last name" />
+            </div>
+            <div class="form-actions">
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+          </div>
+        </form>
+    </div>
+  </div>
 
-      <section>
-        <h1>Where Is The Markup?</h1>
-        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
-      </section>
+  <div class="step" data-x="10000">
+    <h1>Labels and Placeholders</h1>
+    <div class="slide-content">
+      <ul>
+        <li data-jmpress="drive-right">Top positioning improves the association between the label and field</li>
+        <li data-jmpress="drive-right">However, it tends to give the impression of a longer form</li>
+        <li data-jmpress="drive-right">Useful for very familiar, short forms like sign-in forms</li>
+      </ul>
+    </div>
+  </div>
 
-      <section>
-        <h1>What is Markup?</h1>
-        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
-      </section>
-    </section>
+  <div class="step" data-x="11000">
+    <h1>Labels and Placeholders</h1>
+    <div class="slide-content">
+      <ul>
+        <li data-jmpress="drive-right">Right positioning reduces the vertical space of the web form, and improves the association between the label and input</li>
+        <li data-jmpress="drive-right">However, right-positioned labels can reduce the readability and scanability of web forms</li>
+      </ul>
+    </div>
+  </div>
 
-    <section>
-      <h1>Two Types of Markup</h1>
-      <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
-    </section>
-  </section>
+  <div class="step" data-x="12000">
+    <h1>Labels and Placeholders</h1>
+    <div class="slide-content">
+      <ul>
+        <li data-jmpress="drive-right">When the data being collected is unfamiliar or complex, labels should be placed to the left of the field, and should be left-aligned</li>
+        <li data-jmpress="drive-right">This helps visitors scan down the list of labels so that they can see exactly what they will be providing</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="step" data-x="13000">
+    <h1>Labels and Placeholders</h1>
+    <div class="slide-content">
+      <ul>
+        <li data-jmpress="drive-right">Placeholders are great to give the user a hint of the data they need to provide</li>
+        <li data-jmpress="drive-right">You can even get away with no labels, just placeholders, for very familiar forms</li>
+        <li data-jmpress="drive-right">However, once the user enters data, the hint cannot be referred back to for review</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="step" data-x="14000">
+    <h1>Labels and Placeholders</h1>
+    <div class="slide-content">
+      <h2>Label for</h2>
+        <form class="well form-inline">
+          <div class="control-group">
+            <div class="controls">
+              <label class="radio" for="yes-for" name="label-for"><input id="yes-for" type="radio" name="label-for" /> YES</label>
+            </div>
+            <div class="controls">
+              <label class="radio" for="no-for"><input id="no-for" type="radio" name="label-for" /> NO</label>
+            </div>
+            <div class="controls">
+              <label class="radio" for="maybe-for"><input id="maybe-for" type="radio" name="label-for" /> MAYBE</label>
+            </div>
+            <div class="form-actions">
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+          </div>
+        </form>
+    </div>
+  </div>
+
+  <div class="step" data-x="15000">
+    <h1>Autosuggest</h1>
+    <div class="slide-content">
+      <form class="well form-inline">
+        <input type="text" id="freebase-suggest" />
+          <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+
+<script type="text/javascript">
+$(function() {
+  $("#freebase-suggest").suggest({filter:'(all type:/film/director)'});
+});
+</script>
+
+      <ul>
+        <li data-jmpress="drive-right">Saves the user from typing complete data, minimizing errors</li>
+        <li data-jmpress="drive-right">Useful for data types that belong to a "set"</li>
+        <li data-jmpress="drive-right">e.g. tags, categories, countries, dropdowns</li>
+      </ul>
+
+    </div>
+  </div>
+
+  <div class="step" data-x="16000">
+    <h1>Other Tips</h1>
+    <div class="slide-content">
+      <ul>
+        <li data-jmpress="drive-right">Preserve all customer input despite errors in the form</li>
+        <li data-jmpress="drive-right">Validate form fields inline</li>
+        <li data-jmpress="drive-right">Disable the paste-function in the ‘E-mail confirmation’ field</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="step" data-x="17000">
+    <h1>Further Reading</h1>
+    <div class="slide-content">
+      <ul>
+        <li style="font-size: 32px;"><a href="http://sixrevisions.com/user-interface/best-practices-for-hints-and-validation-in-web-forms/">sixrevisions.com/user-interface/best-practices-for-hints-and-validation-in-web-forms/</a></li>
+        <li style="font-size: 32px;"><a href="http://theresultspeople.com/2011/01/13/web-forms-done-right-form-best-practices/">theresultspeople.com/2011/01/13/web-forms-done-right-form-best-practices/</a></li>
+        <li style="font-size: 32px;"><a href="http://net.tutsplus.com/tutorials/html-css-techniques/20-html-forms-best-practices-for-beginners/">http://net.tutsplus.com/tutorials/html-css-techniques/20-html-forms-best-practices-for-beginners/</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="step" data-x="18000">
+    <h1>Colophon</h1>
+    <div class="slide-content">
+      <ul>
+        <li>Slides made using<a href="http://shama.github.com/jmpress.js/"> jmpress.js/</a></li>
+        <li>Website powered by <a href="http://nestacms.com/">Nesta CMS</a></li>
+        <li>Meetup space kindly provided by <a href="http://www.mindvalley.com">Mindvalley</a></li>
+        <li>Don't forget to join our <a href="https://www.facebook.com/groups/ixdakl/">Facebook Group</a></li>
+      </ul>
+    </div>
+  </div>
+
 </div>
 
 <script type="text/javascript">
 $(function() {
-  $('#jmpress').jmpress({
-    stepSelector: "section"
-    ,hash: { use: false }
-  });
+  $('#simple').jmpress();
 });
 </script>
