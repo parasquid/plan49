@@ -1,0 +1,10 @@
+Date: June 22, 2012
+Categories: mongodb
+
+# Caveats when using MongoDB and Linode's Nodebalancers
+
+One of the best-known features of MongoDB is it's being "fast" - bunny quotes because its speed depends on it relaxing a few instances of ACID compliance.
+
+I just got bitten by it this week when debugging why certain records were double-recorded. It turns out, the MongoDB server queues writes if the i/o cannot keep up. This is fine when you only have a single server (and you have a perfect copy of the record to check against when a situation that would cause a double-recording will occur), but when you start putting servers behind a nodebalancer in round-robin fashion you will start getting problems.
+
+Right now I've enabled session stickiness in the nodebalancer so that the same client will be assigned to the same backend server for all of its requests.

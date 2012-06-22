@@ -1,0 +1,12 @@
+Date: June 22
+Categories: 2012, websites
+
+# Embedify Gem
+
+This is project number 3 (out of 49) and it's an open source Ruby gem called [embedify](https://github.com/parasquid/embedify)
+
+Done is better than perfect, and I think at this point the gem is "done" enough to publicly talk about it. The gem (and idea) originally started as a fork of hashrocket's opengraph gem, which retrieves opengraph tags from webpages. The problem was when there was no opengraph tag; the original gem doesn't return any sueful information.
+
+I figured, Facebook is able to assume opengraph elements whenever someone shares a link, so there should be a way to replicate that right? I then forked the gem, added a few of my own routines to grab stuff that Facebook will grab if opengraph tags are missing, and eventually the gem was so much different from the original that I decided it wasn't a fork anymore but rather a completely new gem. I created a new repo, and comitted my work there.
+
+As of now, the github description and documentation are severely lacking, which I will be providing soon(ish). Plus, watch out for the next project which will be making use of the gem :)

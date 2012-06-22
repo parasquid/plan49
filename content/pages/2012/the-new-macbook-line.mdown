@@ -5,11 +5,11 @@ Categories: life
 
 A few days after the WWDC and I'm here thinking: should I get one of the Macbook Pros or the new Macbook Air?
 
-I already have the 2010 MBA and it was the very first Mac laptop I've ever bought. It was also the very first time I've been exposed to how sturdy the build quality of macs are. Half a year after I bought a colleague's 2008 Macbook, and a few months after that I got a Mac mini.
+I already have the 2010 MBA and it was the very first Mac laptop I've ever bought. It was also the very first time I've been exposed to how sturdy the build quality of macs are. Half a year after the MBA, I bought a colleague's 2008 Macbook, and a few months after that I got a Mac mini.
 
-That's aside from the iPod touch and the iPad 2 I got.
+That's aside from the iPod touch and the iPad 2 I got in between laptop purchases.
 
-Even though Mindvalley has an almost all-mac setup (almost due to me getting a hackintosh for finding it difficult to rationalize a purchase of an iMac or a Mac Pro - but hey I get four screens in return - as well as a couple other people preferring to use Windows) it never really hit me how durable Apple products are. Now that the Macbook line has been refreshed, it makes it both easier and more difficult to decide if I should upgrade.
+Even though Mindvalley has an almost all-mac setup (the "almost" qualifier due to me getting a hackintosh because I found it difficult to rationalize a purchase of an iMac or a Mac Pro - but hey I get four screens in return - as well as a couple other people preferring to use Windows) it never really hit me how durable Apple products are until that MBA purchase. Now that the Macbook line has been refreshed, it makes it both easier and more difficult to decide if I should upgrade.
 
 Easier because I know that an Apple product is a great investment that will last me for many years to come (unlike the Compaq Presario I bought that only lasted a couple months after the warranty went out).
 
@@ -26,3 +26,7 @@ Help?
 Update:
 
 It seems that a [13" Retina Macbook Pro](http://www.macrumors.com/2012/06/15/13-inch-retina-macbook-pro-coming-in-october/) will be coming in at October. If that includes a discrete graphics card, then I'm all for it. Actually, now that I think about it, it's just the discrete graphics card I'm after. I don't really need the extra resolution; I can just plug in to my IPS HD external monitor and I'm good. In any case, I feel waiting until October will be the best as there might be discounts around the holiday season. Then again, waiting until the next best thing means you'll forever be waiting.
+
+Update 2:
+
+I bought the 15" lowend MacBook Pro :) The MBA goes to my mother who wanted a more portable laptop (the 2008 MacBook was too heavy to lug around she says). I fervently believe this will be my last laptop purchase until two years after :P Wish me luck with my technolust ...
