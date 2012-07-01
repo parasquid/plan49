@@ -1,0 +1,12 @@
+Date: June 30, 2012
+Categories: macruby
+
+# How to Fix Macruby.h Not Found
+
+Trying to build a MacRuby project With XCode 4.3.3 will often result in an error at main.m saying 'MacRuby/MacRuby.h' file not found"
+
+There are a few tips which involved adding the /Library/Frameworks location to the framework search path in the Build Settings, but I prefer [this](https://github.com/MacRuby/MacRuby/issues/107#issuecomment-6525911) solution by Watson1978.
+
+    ln -s /Library/Frameworks/MacRuby.framework /Applications/Xcode.app/Contents/Developer/Library/Frameworks/MacRuby.framework
+
+This way I don't have to modify the search path to every new MacRuby project I'm doing.

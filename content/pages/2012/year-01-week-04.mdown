@@ -1,0 +1,21 @@
+Date: July 2nd, 2012 03:08
+Categories: 2012, websites
+
+# Happified Me
+
+This is project #4 (out of 49) and it's a webapp to record your happy moments. This week's update came a little late, as my company went through a really huge launch (possibly the largest in the company's history). As they say, better late than never! :P
+
+I've finally gotten this thing live :) After a few weeks of planning on paper, I've managed to get myself worked up enough to actually finish coding the initial proof of concept.
+
+[Happified.Me](http://happified.me) (facebook registration required) is an online happiness journal. Research has shown that when people keep a journal full of positive notes, they live a fuller and more satisfying life.
+
+I'm planning to add a few more features to differentiate the journal from any other kind of note-taking device. These include (but not limited to):
+
+* Weekly email reminders
+* A mobile application (with notfications)
+* Live feed of happified people
+* A blog to talk about happiness
+* File uploads
+* Linkifying links
+
+Any other suggestions?
