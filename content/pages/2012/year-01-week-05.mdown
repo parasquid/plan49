@@ -1,0 +1,8 @@
+Date: July 4
+Categories: 2012, websites
+
+# KL-MUG Presentation on MapReduce
+
+Project #5 (out of 49) is a presentation at Kuala Lumpur Mongo User Group on about [Map Reduce](/presentations/klmug-mapreduce).
+
+It was an interesting presentation, as I myself still have a lot to wrap my mind about blocks and closures and functional programming. I think I did very well though, and I came out much more knowledgeable about the paradigm. Teaching someone gives you a great chance to understand the subject matter in and out :)

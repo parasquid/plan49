@@ -1,6 +1,3 @@
-Date: June 30, 2012
-Categories: presentations
-
 # MongoDB and MapReduce
 
 Here's the [presentation](/attachments/klmug-mapreduce.pdf) in PDF format.
