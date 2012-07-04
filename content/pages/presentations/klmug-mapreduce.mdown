@@ -5,6 +5,8 @@ Categories: presentations
 
 Here's the [presentation](/attachments/klmug-mapreduce.pdf) in PDF format.
 
+Here's the book: [MongoDB: The Definitive Guide](http://www.amazon.com/gp/product/1449381561/ref=as_li_qf_sp_asin_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=1449381561&linkCode=as2&tag=kaliwmulasaku-20) I'd recommend if you want to know more about MongoDB (note: Amazon Affiliate link)
+
 Here's the code used for the crash course in functional programming.
 
 		# Functional programming for PHP programmers. Javascripters, Pythonistas and Rubyists feel free to doze off for a bit :P
