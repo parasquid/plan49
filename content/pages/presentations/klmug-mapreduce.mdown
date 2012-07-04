@@ -1,0 +1,146 @@
+Date: June 30, 2012
+Categories: presentations
+
+# MongoDB and MapReduce
+
+Here's the [presentation](/attachments/klmug-mapreduce.pdf) in PDF format.
+
+Here's the code used for the crash course in functional programming.
+
+		# Functional programming for PHP programmers. Javascripters, Pythonistas and Rubyists feel free to doze off for a bit :P
+
+		# The following is Ruby code
+
+		# Initialize the array
+		array = []
+		1.upto 10 do |i|
+		  array.push Random.rand(100)
+		end
+		# array == [99, 66, 24, 66, 73, 73, 26, 29, 59, 43]
+
+		# Using the map function (a.k.a. collect)
+		array.map { |element| element ** 2 }
+		# => [9801, 4356, 576, 4356, 5329, 5329, 676, 841, 3481, 1849]
+
+		# Another example
+		result = array.map do |element|
+		  if element % 2 == 0
+		    {:even => element}
+		  else
+		    {:odd => element}
+		  end
+		end
+		# result == [{:odd=>99}, {:even=>66}, {:even=>24}, {:even=>66}, {:odd=>73}, {:odd=>73}, {:even=>26}, {:odd=>29}, {:odd=>59}, {:odd=>43}]
+
+		# So what's the difference with this:
+		result = []
+		for element in 0..array.length - 1 do
+		  if element % 2 == 0
+		    result.push({:even => array[element]})
+		  else
+		    result.push({:odd => array[element]})
+		  end
+		end
+		# result == [{:even=>99}, {:odd=>66}, {:even=>24}, {:odd=>66}, {:even=>73}, {:odd=>73}, {:even=>26}, {:odd=>29}, {:even=>59}, {:odd=>43}]
+
+		# Aside from being more verbose, using a 'for' loop forces you to make binding assumptions on the object structure. Using iterators, the strategy of going through the collection is owned and known only by the object itself (to which such knowledge belongs). Imagine if you were iterating through a Tree structure? What does 'next node' mean?
+
+		# The reduce (a.k.a. inject) method simply combines all the elements of the array by applying a binary operation (context is unary[--], binary[+], tertiary operator[?:]).
+
+		# find the longest word
+		longest = %w{ cat sheep bear }.reduce do |memo,word|
+		   memo.length > word.length ? memo : word
+		end
+		# => sheep
+
+		# sum the squares of only the even numbers
+		result.reduce(0) do |sum, hash|
+		  if hash.include? :even
+		    sum + hash[:even] ** 2
+		  else
+		    sum + 0
+		  end
+		end
+		# => 19863
+
+		# Fun with closures
+
+		# Let's biggify this
+		bigger_array = []
+		1.upto 1000 do |i|
+		  bigger_array.push Random.rand(100)
+		end
+		# output not displayed due to space constraints ... but you get the idea :P
+
+		map_function = lambda { |element|
+		  if element % 2 == 0
+		    {:even => element}
+		  else
+		    {:odd => element}
+		  end
+		}
+
+		# the & converts the lambda into a block
+		bigger_array.map &map_function
+
+		# another example
+		# sum the squares of only the even numbers
+		# btw, select returns an array containing all elements of the array for which the block is not false
+		bigger_array.select {|x| x % 2 == 0}.map {|x| x * x}.reduce {|acc, x| acc + x}
+
+		# or, we can name the closures and store them in a variable
+		even = lambda {|x| x % 2 == 0}
+		square = lambda {|x| x * x}
+		sum = lambda {|acc, x| acc + x}
+
+		# and end up with this
+		bigger_array.select(&even).map(&square).reduce(&sum)
+
+		# The following code is done inside the MongoDB prompt
+		'''
+		db.things.insert( { _id : 1, tags : ['dog', 'cat'] } );
+		db.things.insert( { _id : 2, tags : ['cat'] } );
+		db.things.insert( { _id : 3, tags : ['mouse', 'cat', 'dog'] } );
+		db.things.insert( { _id : 4, tags : []  } );
+		'''
+
+		'''
+		m = function(){
+		    this.tags.forEach(
+		        function(z){
+		            emit( z , { count : 1 } );
+		        }
+		    );
+		};
+		'''
+
+		'''
+		r = function( key , values ){
+		    var total = 0;
+		    for ( var i=0; i<values.length; i++ )
+		        total += values[i].count;
+		    return { count : total };
+		};
+		'''
+
+		'''
+		res = db.things.mapReduce(m, r, { out : "myoutput" } );
+		// {
+		//   "result" : "myoutput",
+		//   "timeMillis" : 12,
+		//   "counts" : {
+		//     "input" : 4,
+		//     "emit" : 6,
+		//     "output" : 3
+		//   },
+		//   "ok" : 1,
+		// }
+		'''
+
+		'''
+		db.myoutput.find()
+		// {"_id" : "cat" , "value" : {"count" : 3}}
+		// {"_id" : "dog" , "value" : {"count" : 2}}
+		// {"_id" : "mouse" , "value" : {"count" : 1}}
+		db.myoutput.drop()
+		'''
