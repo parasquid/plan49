@@ -1,4 +1,4 @@
-Date: July 4
+Date: July 4, 2012
 Categories: 2012, websites
 
 # KL-MUG Presentation on MapReduce

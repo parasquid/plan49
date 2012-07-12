@@ -1,4 +1,4 @@
-Date: June 22
+Date: June 22, 2012
 Categories: 2012, websites
 
 # Embedify Gem

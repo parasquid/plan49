@@ -1,0 +1,10 @@
+Date: July 9, 2012
+Categories: 2012
+
+# Cloudspokes Challenge 1599
+
+Project #6 (out of 49) is my very first submission to a Cloudspokes [challenge](http://www.cloudspokes.com/challenges/1599).
+
+I've published the [source code](https://bitbucket.org/parasquid/cs_1599) on Bitbucket.
+
+Here's hoping I nab the first prize (although I think there's a lot of really good competition out there).
